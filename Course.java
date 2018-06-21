@@ -9,7 +9,6 @@ public class Course {
         char grade = 'A';
         String s = "M*0.3+P*0.3+E*0.4";
         String[] splitter = s.split("[+]");
-        Map<String,Float> tr = new HashMap<String,Float>();
         String[] splitter2 = {"0"};
         int X = 1;
         float total = 0;
@@ -17,10 +16,8 @@ public class Course {
             splitter2 = splitter[i].split("[*]");
             System.out.println("Enter the value of " + splitter2[0]);
             X = input.nextInt();
-            tr.put(splitter2[0],Float.parseFloat(splitter2[1]));
-            total = total + tr.get(splitter2[0])*X;
+            total = total + Float.parseFloat(splitter2[1])*X;
             }
-
         System.out.println("Your total is "+total);
         if (total >= 90) {
             grade = 'A';
