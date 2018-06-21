@@ -10,15 +10,15 @@ public class Course {
         String s = "M*0.3+P*0.3+E*0.4";
         String[] splitter = s.split("[+]");
         Map<String,Float> tr = new HashMap<String,Float>();
-        String[] s2 = {"0"};
+        String[] splitter2 = {"0"};
         int X = 1;
         float total = 0;
         for(int i = 0 ; i<splitter.length;i++){
-            s2 = splitter[i].split("[*]");
-            System.out.println("Enter the value of " + s2[0]);
+            splitter2 = splitter[i].split("[*]");
+            System.out.println("Enter the value of " + splitter2[0]);
             X = input.nextInt();
-            tr.put(s2[0],Float.parseFloat(s2[1]));
-            total = total + tr.get(s2[0])*X;
+            tr.put(splitter2[0],Float.parseFloat(splitter2[1]));
+            total = total + tr.get(splitter2[0])*X;
             }
 
         System.out.println("Your total is "+total);
